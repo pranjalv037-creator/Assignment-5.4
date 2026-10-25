@@ -1,0 +1,121 @@
+/* 1. Design Tokens */
+:root {
+    /* Color Variables */
+    --primary-color: #24558a;
+    --secondary-color: #d5a85c;
+    --background-color: #f0f4f8;
+    --text-color: #333333;
+    --card-color: #ffffff;
+
+    /* Spacing Variables */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+
+    /* Font Size Variables */
+    --font-small: 14px;
+    --font-medium: 18px;
+    --font-large: 32px;
+}
+
+/* 2. General Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* 3. Header */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-large);
+}
+
+.header h1 {
+    font-size: var(--font-large);
+    margin-bottom: var(--spacing-small);
+}
+
+.header p {
+    font-size: var(--font-medium);
+}
+
+/* 4. Main Content */
+.container {
+    max-width: 1000px;
+    margin: var(--spacing-large) auto;
+    padding: 0 var(--spacing-medium);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: var(--font-large);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    margin-top: var(--spacing-large);
+}
+
+/* 5. Cards */
+.card {
+    background-color: var(--card-color);
+    padding: var(--spacing-medium);
+    border-radius: var(--spacing-small);
+    border-top: 4px solid var(--secondary-color);
+    flex: 1 1 250px;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    font-size: var(--font-medium);
+}
+
+.card p {
+    font-size: var(--font-small);
+}
+
+/* 6. Buttons */
+.primary-button,
+.secondary-button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: var(--spacing-small);
+    font-size: var(--font-small);
+    cursor: pointer;
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Header button contrast */
+.header .primary-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* 7. Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-medium);
+    font-size: var(--font-small);
+}
